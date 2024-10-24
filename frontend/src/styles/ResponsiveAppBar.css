@@ -1,0 +1,11 @@
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-left: 20px; /* You may need to adjust this value based on your theme spacing */
+}
+
+a:hover {
+  color: yellow;
+  border-bottom: 1px solid white;
+}

@@ -1,0 +1,24 @@
+# /server/Dockerfile
+
+FROM node:16-slim
+
+WORKDIR /app
+
+# Install Python and other build tools
+RUN apt-get update && apt-get install -y python3 make g++ && rm -rf /var/lib/apt/lists/*
+
+# Copy package.json and package-lock.json first to leverage Docker cache
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install --only=production  # Install only production dependencies
+
+# Copy the rest of the application code
+COPY . .
+
+# Rebuild native modules
+RUN npm rebuild bcrypt --build-from-source
+
+EXPOSE 3000
+
+CMD ["node", "src/server"]  # Change src/server to your entry file

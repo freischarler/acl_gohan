@@ -1,0 +1,127 @@
+
+
+
+/* ANIMATIONS */
+.fade-in-2 {
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 2s; /* Transición de aparición */
+}
+
+.fade-in-2.visible {
+  opacity: 1; /* Aparecer completamente */
+}
+
+@keyframes fadeIn2 {
+  from {
+    opacity: 0; /* Inicialmente invisible */
+  }
+  to {
+    opacity: 1; /* Aparecer completamente */
+  }
+}
+
+.fade-in-25 {
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 2.5s; /* Transición de aparición */
+}
+
+.fade-in-25.visible {
+  opacity: 1; /* Aparecer completamente */
+}
+
+@keyframes fadeIn25 {
+  from {
+    opacity: 0; /* Inicialmente invisible */
+  }
+  to {
+    opacity: 1; /* Aparecer completamente */
+  }
+}
+
+/* Fade in with 1-second transition */
+.fade-in {
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 1s; /* Transición de aparición en 1 segundo */
+}
+
+.fade-in.visible {
+  opacity: 1; /* Aparecer completamente */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Inicialmente invisible */
+  }
+  to {
+    opacity: 1; /* Aparecer completamente */
+  }
+}
+
+/* Fade in from the right */
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(100%); /* Start from the right */
+  transition: opacity 1s, transform 1s;
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0); /* Move to original position */
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade in from the left */
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-100%); /* Start from the left */
+  transition: opacity 1s, transform 1s;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0); /* Move to original position */
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scale up */
+.scale-up {
+  opacity: 0;
+  transform: scale(0.8); /* Start smaller */
+  transition: opacity 1s, transform 1s;
+}
+
+.scale-up.visible {
+  opacity: 1;
+  transform: scale(1); /* Scale to original size */
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,437 @@
+#ncaa-content.layout-content {
+  max-width:none !important;
+  margin:0 !important
+}
+@media only screen and (max-width: 767px) {
+  #ncaa-content.layout-content {
+    margin:0 15px
+  }
+}
+@media only screen and (max-width: 767px) {
+  #team-feed-wrapper.layout-content {
+    margin:0 15px
+  }
+}
+.team-header {
+  padding:57px 0 0 0;
+  color:#fff;
+}
+@media only screen and (max-width: 1229px) {
+  .team-header {
+    padding:36px 0 0 0
+  }
+}
+.team-header .head-mast {
+  position:relative;
+  display:block;
+  text-align:center;
+}
+@media only screen and (max-width: 767px) {
+  .team-header .head-mast {
+    text-align:left
+  }
+}
+.team-header .head-mast .primer {
+  position:absolute;
+  top:0;
+  left:0;
+  text-align:left;
+}
+@media only screen and (max-width: 767px) {
+  .team-header .head-mast .primer {
+    position:static;
+    float:left
+  }
+}
+.team-header .head-mast .team-logo {
+  display:inline-block;
+  margin:3px 0 0 0;
+  width:170px
+}
+.team-header .head-mast .team-logo img {
+  width:157px;
+}
+@media only screen and (max-width: 767px) {
+  .team-header .head-mast .team-logo {
+    float:right;
+    margin-right:15px;
+    width:60px
+  }
+  .team-header .head-mast .team-logo img {
+    width:60px
+  }
+}
+.team-header .head-mast:after {
+  content:"";
+  display:table;
+  clear:both
+}
+@media only screen and (max-width: 767px) {
+  .team-header .layout-content {
+    margin-left:15px
+  }
+}
+.team-header dl.team-details {
+  display:flex;
+  flex-wrap:nowrap;
+  flex-direction:row;
+  justify-content:flex-start;
+  align-items:stretch;
+  padding:34px 0 40px 0;
+  margin:0
+}
+@media only screen and (max-width: 1229px) {
+  .team-header dl.team-details {
+    padding:25px 0 30px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .team-header dl.team-details {
+    display:block;
+    padding:12px 0 2px 0
+  }
+}
+.team-header dl.team-details .dl-group {
+  flex:1;
+  padding:0 8px 7px 8px;
+  text-align:center;
+}
+.team-header dl.team-details .dl-group:nth-child(2) {
+  border-right:1px solid #fff;
+  border-left:1px solid #fff;
+}
+@media only screen and (max-width: 767px) {
+  .team-header dl.team-details .dl-group {
+    text-align:left;
+    padding:0 0 18px 0
+  }
+  .team-header dl.team-details .dl-group:nth-child(2) {
+    border-top:1px solid #fff;
+    border-bottom:1px solid #fff;
+    border-right:none;
+    border-left:none
+  }
+}
+.team-header dl.team-details .dl-group dt {
+  padding:1px 0 0 0;
+  font-family:"Geogrotesque","Rockwell",Georgia,Times,"Times New Roman",serif;
+  font-size:.75rem;
+  font-weight:500;
+  text-transform:uppercase;
+}
+@media only screen and (max-width: 767px) {
+  .team-header dl.team-details .dl-group dt {
+    padding:12px 0 0 0
+  }
+}
+.team-header dl.team-details .dl-group dd {
+  margin:10px 0 0 0;
+  font-family:"Geogrotesque","Rockwell",Georgia,Times,"Times New Roman",serif;
+  font-size:1.875rem;
+  font-weight:600;
+  text-transform:uppercase
+}
+@media only screen and (max-width: 767px) {
+  .team-header dl.team-details .dl-group dd {
+    margin:0
+  }
+}
+@media only screen and (max-width: 1229px) {
+  .team-header dl.team-details .dl-group dd {
+    font-size:1.25rem
+  }
+}
+.team-header .team-links ul {
+  list-style-type:none;
+  padding:18px 0;
+  margin:0;
+  text-align:center
+}
+@media only screen and (max-width: 767px) {
+  .team-header .team-links ul {
+    padding:7px 0
+  }
+}
+.team-header .team-links ul li {
+  display:inline-block;
+  padding:0 25px;
+  font-family:"Geogrotesque","Rockwell",Georgia,Times,"Times New Roman",serif;
+  font-size:.75rem;
+  font-weight:500;
+  text-transform:uppercase
+}
+.team-header .team-links ul li a {
+  color:#fff
+}
+@media only screen and (max-width: 767px) {
+  .team-header .team-links ul li {
+    padding:0 45px
+  }
+}
+.team-header .team-links .icon-facebook,
+.team-header .team-links .icon-twitter,
+.team-header .team-links .icon-web {
+  display:inline-block;
+  width:20px;
+  height:22px;
+  background-repeat:no-repeat;
+  background-size:20px;
+  background-position:0 2px;
+  text-indent:-99999px;
+  padding:0 8px 0 0
+}
+.team-header .team-links .icon-facebook {
+  background-image:url("../img/icon-facebook.svg")
+}
+.team-header .team-links .icon-twitter {
+  background-image:url("../img/icon-twitter.svg")
+}
+.team-header .team-links .icon-web {
+  background-image:url("../img/icon-web.svg")
+}
+@media only screen and (max-width: 767px) {
+  .team-header .team-links .info {
+    display:none
+  }
+  .team-header .team-links .icon-facebook,
+  .team-header .team-links .icon-twitter,
+  .team-header .team-links .icon-web {
+    padding:0
+  }
+}
+.team-header .division-location {
+  font-family:"Geogrotesque","Rockwell",Georgia,Times,"Times New Roman",serif;
+  font-size:.75rem;
+  font-weight:500;
+  text-transform:uppercase
+}
+.team-header .team-name {
+  margin:2px 0 0 0;
+  font-family:"Geogrotesque","Rockwell",Georgia,Times,"Times New Roman",serif;
+  font-size:1.625rem;
+  font-weight:600
+}
+@media only screen and (max-width: 767px) {
+  .team-header .team-name {
+    font-size:1.125rem;
+    margin:0
+  }
+}
+.feed-items {
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:space-evenly;
+  padding:0;
+  margin:45px 0 0 0;
+  list-style-type:none
+}
+@media only screen and (max-width: 1229px) {
+  .feed-items {
+    margin-top:36px
+  }
+}
+@media only screen and (max-width: 767px) {
+  .feed-items {
+    margin-top:27px
+  }
+}
+.feed-items li {
+  flex:1 1 28%;
+  width:0;
+  max-width:388px;
+  margin:4px 11px 61px;
+  box-sizing:border-box
+}
+@media only screen and (max-width: 1229px) {
+  .feed-items li {
+    flex-basis:40%;
+    margin:4px 6px 38px
+  }
+}
+@media only screen and (min-width: 768px)and (max-width: 1229px) {
+  .feed-items li:not(:last-child):not(:nth-last-child(2)) {
+    border-bottom:1px solid #bbbcbe
+  }
+}
+@media only screen and (max-width: 767px) {
+  .feed-items li {
+    flex-basis:100%;
+    margin:4px 6px 28px
+  }
+  .feed-items li:not(:last-child) {
+    border-bottom:1px solid #bbbcbe
+  }
+}
+.feed-items li .sport {
+  margin:0;
+  color:#7d7f81;
+  font-family:"Geogrotesque","Rockwell",Georgia,Times,"Times New Roman",serif;
+  font-size:.75rem;
+  font-weight:500;
+  letter-spacing:1px;
+  text-transform:uppercase
+}
+.feed-items li .headline {
+  min-height:2.5rem;
+  margin:4px 0 0 0;
+  font-family:"Geogrotesque","Rockwell",Georgia,Times,"Times New Roman",serif;
+  font-size:1rem;
+  font-weight:600;
+  line-height:20px
+}
+.feed-items li .headline,
+.feed-items li .headline a {
+  color:#000
+}
+.feed-items li .thumb {
+  position:relative;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  overflow:hidden
+}
+.feed-items li .thumb.no-thumb {
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:auto
+}
+.feed-items li .thumb.no-thumb a {
+  display:block;
+  width:100%;
+  height:100%
+}
+.feed-items li .thumb img {
+  width:100%;
+  height:100%;
+  opacity:0
+}
+.feed-items li .read-more {
+  text-align:right;
+  margin:34px 22px 23px 0
+}
+@media only screen and (max-width: 767px) {
+  .feed-items li .read-more {
+    margin-top:4px
+  }
+}
+.feed-items li .read-more a {
+  padding-right:22px;
+  color:#009cde;
+  font-family:"Geogrotesque","Rockwell",Georgia,Times,"Times New Roman",serif;
+  font-weight:500;
+  font-size:.875rem;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  background-image:url("/modules/custom/casablanca_core/img/ui-right_arrow.svg");
+  background-position:center right;
+  background-repeat:no-repeat;
+  background-size:8px 12px
+}
+.feed-items li.superpage .sport,
+.feed-items li.article .sport {
+  margin-top:-4px
+}
+.feed-items li.superpage .preview,
+.feed-items li.article .preview {
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:flex-start;
+  margin:14px 0 0 0
+}
+.feed-items li.superpage .preview .thumb,
+.feed-items li.article .preview .thumb {
+  flex-shrink:0;
+  width:144px;
+  height:144px;
+  margin-right:14px
+}
+.feed-items li.superpage .preview .thumb.no-thumb,
+.feed-items li.article .preview .thumb.no-thumb {
+  background-size:80%
+}
+@media only screen and (max-width: 767px) {
+  .feed-items li.superpage .preview .thumb,
+  .feed-items li.article .preview .thumb {
+    display:none
+  }
+}
+.feed-items li.superpage .preview .summary,
+.feed-items li.article .preview .summary {
+  flex:1;
+  max-height:144px;
+  font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:.75rem;
+  font-weight:400;
+  line-height:1.25rem;
+  text-overflow:ellipsis;
+  overflow:hidden
+}
+.feed-items li.video .thumb {
+  max-height:219px;
+  aspect-ratio:16/9;
+  position:relative;
+  background-color:#f9f9f9
+}
+.feed-items li.video .thumb.no-thumb {
+  background-size:50%
+}
+.feed-items li.video .thumb a:after {
+  display:block;
+  content:" ";
+  top:42%;
+  width:100%;
+  height:40px;
+  background-image:url("../img/play.svg");
+  background-repeat:no-repeat;
+  background-position:center;
+  position:absolute
+}
+.feed-items li.video .sport {
+  margin-top:11px
+}
+.feed-items li.video .headline {
+  margin-bottom:15px
+}
+.load-more {
+  display:block;
+  padding:35px 0;
+  margin:0 0 49px 0;
+  border-bottom:1px solid #bbbcbe;
+  text-align:center;
+  font-family:"Geogrotesque","Rockwell",Georgia,Times,"Times New Roman",serif;
+  font-size:.875rem;
+  font-weight:500;
+  color:#009cde;
+  letter-spacing:1px;
+  text-transform:uppercase
+}
+.load-more .load-more-button {
+  cursor:pointer
+}
+.load-more .iconPlus {
+  display:inline-block;
+  width:10px;
+  height:10px;
+  padding:0 10px 7px 0;
+  background-image:url("/modules/custom/casablanca_core/img/ui-plus.svg");
+  background-repeat:no-repeat;
+  background-position:right bottom;
+  background-size:10px 10px
+}
+.load-more.disabled .load-more-button {
+  cursor:default;
+  color:#ccc
+}
+.load-more.disabled .iconPlus {
+  background-image:url("/modules/custom/casablanca_core/img/ui-plus_disable.svg")
+}
+@media only screen and (max-width: 1229px) {
+  .load-more {
+    border-top:1px solid #bbbcbe
+  }
+}
+@media only screen and (max-width: 767px) {
+  .load-more {
+    padding:30px 0
+  }
+}

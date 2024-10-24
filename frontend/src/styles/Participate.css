@@ -1,0 +1,19 @@
+.responsive-select {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.responsive-select label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.responsive-select select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px;
+}

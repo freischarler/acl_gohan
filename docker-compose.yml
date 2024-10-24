@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+  client:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"  # Expose port 80 for the React app
+    networks:
+      - app-network
+    env_file:
+      - .env  # Reference the .env file
+    depends_on:
+      - db  # Ensure the database starts before the server
+
+  server:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"  # Expose port 3000 for the Node.js app
+    networks:
+      - app-network
+    env_file:
+      - .env  # Reference the .env file
+    depends_on:
+      db:
+        condition: service_healthy  # Wait for the database to be healthy
+
+  db:
+    image: postgres:13  # Use the official PostgreSQL image
+    restart: always
+    environment:
+      POSTGRES_USER: postgres  # Change this to your desired user
+      POSTGRES_PASSWORD: root  # Change this to your desired password
+      POSTGRES_DB: acl  # Change this to your desired database name
+    ports:
+      - "5432:5432"  # Expose port 5432 for PostgreSQL
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    
+
+
+  nginx:
+      build: 
+        context: nginx
+      container_name: nginx
+      restart: always
+      tty: true
+      ports: 
+        - "8000:80"
+      networks: 
+        - app-network
+      depends_on:
+        - client
+        - server
+        
+networks:
+  app-network:
+    driver: bridge
+
+
+# docker-compose up -d --build          
+# docker-compose down
