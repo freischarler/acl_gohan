@@ -17,6 +17,9 @@ COPY . .
 # Build the Vite app
 RUN npm run build
 
+# Copy the build output to the Nginx HTML directory
+COPY ./frontend/dist /usr/share/nginx/html
+
 # Expose the port Nginx will run on
 EXPOSE 5173
 
