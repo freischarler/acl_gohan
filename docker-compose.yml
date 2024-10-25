@@ -1,6 +1,6 @@
 services:
   client:
-    container_name: front-end
+    container_name: client
     build:
       context: ./frontend
       dockerfile: Dockerfile
@@ -19,7 +19,7 @@ services:
       - /app/node_modules
 
   server:
-    container_name: back-end
+    container_name: server
     build:
       context: ./backend
       dockerfile: Dockerfile
@@ -52,21 +52,18 @@ services:
 
 
   nginx:
-      build: 
-        context: nginx
-      container_name: nginx
-      restart: always
-      tty: true
-      ports: 
-        - "8000:80"
-      networks:
-        app-network:
-          aliases:
-            - server
-            - client
-      depends_on:
-        - client
-        - server
+    build: 
+      context: nginx
+    container_name: nginx
+    restart: always
+    tty: true
+    ports: 
+      - "8000:80"
+    networks:
+      - app-network
+    depends_on:
+      - client
+      - server
         
 networks:
   app-network:
