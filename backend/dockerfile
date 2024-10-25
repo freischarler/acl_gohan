@@ -21,4 +21,4 @@ RUN npm rebuild bcrypt --build-from-source
 
 EXPOSE 3000
 
-CMD ["node", "src/server"]  # Change src/server to your entry file
+CMD ["node", "src/server.js"]  # Change src/server to your entry file
