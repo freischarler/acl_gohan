@@ -11,9 +11,8 @@ services:
       - .env  # Reference the .env file
     depends_on:
       - db  # Ensure the database starts before the server
-    volumes:
-      - ./client:/base
-      - /base/node_modules/
+    stdin_open: true
+    tty: true
 
   server:
     build:
