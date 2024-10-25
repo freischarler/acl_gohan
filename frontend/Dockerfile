@@ -20,7 +20,3 @@ RUN npm run build
 # Expose the port Nginx will run on
 EXPOSE 5173
 
-
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
-
