@@ -51,8 +51,11 @@ services:
       tty: true
       ports: 
         - "8000:80"
-      networks: 
-        - app-network
+      networks:
+        app-network:
+          aliases:
+            - server
+            - client
       depends_on:
         - client
         - server
