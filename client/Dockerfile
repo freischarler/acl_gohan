@@ -1,4 +1,4 @@
-# /frontend/Dockerfile
+# /client/Dockerfile
 
 # Stage 1: Build the Vite app
 FROM node:16-slim AS build

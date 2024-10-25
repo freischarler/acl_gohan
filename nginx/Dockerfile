@@ -8,11 +8,11 @@ RUN echo "Contents of /:" && ls -la /
 # Log the contents of the /etc/nginx/conf.d directory
 RUN echo "Contents of /etc/nginx/conf.d:" && ls -la /etc/nginx/conf.d
 
-# Log the contents of the /frontend directory
-RUN echo "Contents of /frontend:" && ls -la /frontend
+# Log the contents of the /client directory
+RUN echo "Contents of /client:" && ls -la /client
 
-# Log the contents of the /frontend/dist directory
-RUN echo "Contents of /frontend/dist:" && ls -la /frontend/dist
+# Log the contents of the /client/dist directory
+RUN echo "Contents of /client/dist:" && ls -la /client/dist
 
 # Copy custom Nginx configuration file
 COPY default.conf /etc/nginx/conf.d/default.conf

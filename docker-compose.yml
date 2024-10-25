@@ -2,7 +2,7 @@ services:
   client:
     container_name: client
     build:
-      context: ./frontend
+      context: ./client
       dockerfile: Dockerfile
     ports:
       - "5173:5173"  # Expose port 80 for the React app
@@ -15,7 +15,7 @@ services:
     stdin_open: true
     tty: true
     volumes:
-      - ./frontend:/app
+      - ./client:/app
       - /app/node_modules
 
   server:
