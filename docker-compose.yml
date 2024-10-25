@@ -59,6 +59,8 @@ networks:
   app-network:
     driver: bridge
 
+volumes:
+  postgres_data:  # Define a volume for PostgreSQL data persistence
 
 # docker-compose up -d --build          
 # docker-compose down
