@@ -37,7 +37,7 @@ services:
     ports:
       - "5432:5432"  # Expose port 5432 for PostgreSQL
     volumes:
-      - ./data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
     networks:
       - app-network
     
@@ -63,6 +63,7 @@ networks:
 
 volumes:
   postgres_data:  # Define a volume for PostgreSQL data persistence
+    external: false
 
 # docker-compose up -d --build          
 # docker-compose down
