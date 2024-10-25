@@ -11,6 +11,9 @@ services:
       - .env  # Reference the .env file
     depends_on:
       - db  # Ensure the database starts before the server
+    volumes:
+      - ./client:/base
+      - /base/node_modules/
 
   server:
     build:
@@ -65,3 +68,6 @@ volumes:
 # docker-compose up -d --build          
 # docker-compose down
 # docker-compose down --volumes --remove-orphans
+
+#test
+#docker-compose run --rm server sh
