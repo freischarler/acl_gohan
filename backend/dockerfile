@@ -19,6 +19,10 @@ COPY . .
 # Rebuild native modules
 RUN npm rebuild bcrypt --build-from-source
 
+# Set the NODE_ENV environment variable
+ENV NODE_ENV=production
+
 EXPOSE 3000
 
-CMD ["node", "src/server.js"]  # Change src/server to your entry file
+# Use npm start instead of calling node directly
+CMD ["npm", "start"]
