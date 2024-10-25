@@ -23,8 +23,7 @@ services:
     env_file:
       - .env  # Reference the .env file
     depends_on:
-      db:
-        condition: service_healthy  # Wait for the database to be healthy
+      - db  # Ensure the database starts before the server
 
   db:
     image: postgres:13  # Use the official PostgreSQL image
@@ -39,11 +38,6 @@ services:
       - ./data:/var/lib/postgresql/data
     networks:
       - app-network
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
     
 
 
