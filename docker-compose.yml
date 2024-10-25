@@ -31,6 +31,9 @@ services:
       - .env  # Reference the .env file
     depends_on:
       - db  # Ensure the database starts before the server
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
 
   db:
     image: postgres:13  # Use the official PostgreSQL image
@@ -76,6 +79,10 @@ volumes:
 # docker-compose up -d --build          
 # docker-compose down
 # docker-compose down --volumes --remove-orphans
+
+#best: 
+#docker-compose down --rmi all -v
+
 
 #test
 #docker-compose run --rm server sh
