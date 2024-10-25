@@ -18,7 +18,7 @@ RUN echo "Contents of /frontend/dist:" && ls -la /frontend/dist
 COPY default.conf /etc/nginx/conf.d/default.conf
 
 # Copy the build output to the Nginx HTML directory
-COPY ./frontend/dist /usr/share/nginx/html
+COPY ./client/dist /usr/share/nginx/html
 
 # Expose the port Nginx will run on
 EXPOSE 80
