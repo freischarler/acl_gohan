@@ -6,7 +6,7 @@ FROM node:16-slim AS build
 WORKDIR /app
 
 # Copy package.json and package-lock.json first to leverage Docker cache
-COPY package*.json ./
+COPY package.json package-lock.json ./
 
 # Install dependencies
 RUN npm install
