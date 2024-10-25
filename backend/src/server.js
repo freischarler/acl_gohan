@@ -29,6 +29,9 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
+
+console.log('Ambient' + process.env.NODE_ENV);
+
 if (process.env.NODE_ENV === 'development') {
   app.use(cors());
   console.log('CORS-enabled for all origins');
