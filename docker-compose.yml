@@ -82,6 +82,14 @@ volumes:
 
 
 #test
+#docker-compose logs -f nginx
 #docker-compose run --rm server sh
 #back: node src/server.js 
 #front: npm run dev
+
+#docker exec -it nginx ping client
+#docker exec -it nginx ping server
+
+#docker exec -it nginx apk add curl
+#ocker exec -it nginx curl http://client:5173
+#docker exec -it nginx curl http://server:3000/api
