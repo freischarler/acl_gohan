@@ -24,8 +24,6 @@ import errorHandler from './middlewares/errorHandler.js';
 
 dotenv.config();
 
-
-
 const app = express();
 app.use(express.json());
 
@@ -51,7 +49,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: 'An error occurred', error: err.message });
 });
 
-connectDB().then(syncModels);
+//connectDB().then(syncModels); for test
 
 app.use('/api/users', userRoutes);
 app.use('/api/events', eventRoutes);
