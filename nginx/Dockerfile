@@ -2,9 +2,6 @@
 
 FROM nginx:alpine
 
-# Copy custom Nginx configuration file
-COPY default.conf /etc/nginx/conf.d/default.conf
-
 # Log the contents of the root directory
 RUN echo "Contents of /:" && ls -la /
 
@@ -16,6 +13,9 @@ RUN echo "Contents of /frontend:" && ls -la /frontend
 
 # Log the contents of the /frontend/dist directory
 RUN echo "Contents of /frontend/dist:" && ls -la /frontend/dist
+
+# Copy custom Nginx configuration file
+COPY default.conf /etc/nginx/conf.d/default.conf
 
 # Copy the build output to the Nginx HTML directory
 COPY ./frontend/dist /usr/share/nginx/html
