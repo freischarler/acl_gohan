@@ -1,11 +1,11 @@
 services:
   client:
+    container_name: front-end
     build:
       context: ./frontend
       dockerfile: Dockerfile
     ports:
       - "5173:5173"  # Expose port 80 for the React app
-    container_name: front-end
     networks:
       - app-network
     env_file:
@@ -14,12 +14,15 @@ services:
       - db  # Ensure the database starts before the server
     stdin_open: true
     tty: true
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
 
   server:
+    container_name: back-end
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: back-end
     ports:
       - "3000:3000"  # Expose port 3000 for the Node.js app
     networks:
