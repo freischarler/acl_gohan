@@ -5,6 +5,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - "5173:5173"  # Expose port 80 for the React app
+    container_name: front-end
     networks:
       - app-network
     env_file:
@@ -18,6 +19,7 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
+    container_name: back-end
     ports:
       - "3000:3000"  # Expose port 3000 for the Node.js app
     networks:
